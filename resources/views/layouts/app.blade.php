@@ -30,7 +30,57 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('crm.dashboard') }}">
+                                    <i class="fas fa-tachometer-alt me-1"></i> Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-chart-line me-1"></i> Vendas
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ route('crm.kanban') }}">
+                                        <i class="fas fa-columns me-2"></i> Funil de Vendas
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="{{ route('crm.contacts') }}">
+                                        <i class="fas fa-users me-2"></i> Contatos
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="fab fa-whatsapp me-1"></i> WhatsApp
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ route('crm.chat') }}">
+                                        <i class="fas fa-comments me-2"></i> Conversas
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="{{ route('whatsapp.index') }}">
+                                        <i class="fas fa-cog me-2"></i> Configurações
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-history me-1"></i> Relatórios
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ route('crm.history.recent') }}">
+                                        <i class="fas fa-clock me-2"></i> Atividades Recentes
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="{{ route('crm.history.stats') }}">
+                                        <i class="fas fa-chart-bar me-2"></i> Estatísticas
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('crm.webhooks.view') }}">
+                                    <i class="fas fa-webhook me-1"></i> Webhooks
+                                </a>
+                            </li>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

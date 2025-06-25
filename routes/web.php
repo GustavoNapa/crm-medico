@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\WhatsAppController;
 
 /*
@@ -84,6 +85,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/webhooks/view', function () {
             return view('crm.webhooks');
         })->name('webhooks.view');
+        
+        // Documentation Route
+        Route::get('/documentation', function () {
+            return view('crm.documentation');
+        })->name('documentation');
     });
 });
 
