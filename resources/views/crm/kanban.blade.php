@@ -6,15 +6,15 @@
 @section('content')
 <!-- Estatísticas do Funil -->
 <div class="row mb-4">
-    <div class="col-md-3">
+    <div class="col-6 col-md-3">
         <div class="card text-center">
             <div class="card-body">
-                <h3 class="text-primary">{{ number_format($totalValue, 2, ',', '.') }}</h3>
+                <h3 class="text-primary">{{ number_format($totalValue, 2, ",", ".") }}</h3>
                 <p class="text-muted mb-0">Valor Total em Negociação</p>
             </div>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-6 col-md-3">
         <div class="card text-center">
             <div class="card-body">
                 <h3 class="text-info">{{ $totalDeals }}</h3>
@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-6 col-md-3">
         <div class="card text-center">
             <div class="card-body">
                 <h3 class="text-success">{{ $wonDeals }}</h3>
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-6 col-md-3">
         <div class="card text-center">
             <div class="card-body">
                 <h3 class="text-danger">{{ $lostDeals }}</h3>
